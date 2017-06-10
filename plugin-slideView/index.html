@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" >
+    <title>幻灯片效果演示</title>
+    <link rel="stylesheet" href="view.css">
+    <script src="view.js"></script>
+    <style>
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-list-1,.slide-list{
+            display: inline-block;
+        }
+        .slide-list-1{
+            margin-left: 150px;
+        }
+        .slide-list{
+            margin-left: 250px;
+        }
+        ul>li>img{width:400px;height:400px;}
+    </style>
+</head>
+<body>
+<ul class="slide-list-1">
+    <li class="slide-item"><img src="img/张起灵1.jpg" alt=""></li>
+    <li class="slide-item"><img src="img/张起灵2.jpeg" alt=""></li>
+    <li class="slide-item"><img src="img/背景1.jpg" alt=""></li>
+    <li class="slide-item"><img src="img/背景2.jpg" alt=""></li>
+    <li class="slide-item"><img src="img/背景3.jpg" alt=""></li>
+    <li class="slide-item"><img src="img/背景2.jpg" alt=""></li>
+</ul>
+<ul class="slide-list">
+    <li class="slide-item"><img src="img/张起灵1.jpg" alt=""></li>
+    <li class="slide-item"><img src="img/张起灵2.jpeg" alt=""></li>
+    <li class="slide-item"><img src="img/背景1.jpg" alt=""></li>
+    <li class="slide-item"><img src="img/背景2.jpg" alt=""></li>
+    <li class="slide-item"><img src="img/背景3.jpg" alt=""></li>
+    <li class="slide-item"><img src="img/背景2.jpg" alt=""></li>
+</ul>
+
+<script>
+    var a=slide.init({
+        list:'slide-list-1',
+        itemClass:'slide-item',
+        hoverStop : false,  //鼠标悬浮不停止滚动
+        iTime:2000, //设置每张图总显示时间为2s（包括滑动时间）
+        duration:1000,  //设置切换（即滑动时间）为1s
+/*        width:400,
+        height:400,*/
+        direction:'left',   //向左滑动
+        hasBtn:true,
+        hasBtnFont:true,    //显示滑动页码
+        hasNext:true,
+        hasPrev:true,
+    });
+    var b= slide.init({
+        list:'slide-list',
+        itemClass:'slide-item',
+        hoverStop :true,
+/*        width:400,
+        height:400,*/
+        direction:'top',
+        hasBtn:true,
+        hasBtnFont:false,
+        hasNext:true,
+        hasPrev:true,
+    });
+
+
+</script>
+</body>
+</html>

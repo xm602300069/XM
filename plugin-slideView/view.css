@@ -1,0 +1,52 @@
+/*按钮列表样式*/
+.Obj_btn_list{
+    position: absolute;
+    right:4%;
+}
+
+/*按钮样式*/
+.Obj_btn{
+    display:block ;
+    position: relative;
+    width: 18px;
+    float: left;
+    text-align: center;
+    color: blueviolet;
+    background: chartreuse;
+    margin-top: 7px;
+    margin-left: 14px;
+    cursor: pointer;
+}
+
+/*当前活跃的按钮样式*/
+.Obj_btn.active{
+    color: grey;
+    background-color: palevioletred;
+}
+
+/*上一页，下一页按钮样式*/
+.Obj_next,.Obj_prev{
+    margin: 0;
+    padding: 0;
+    width:26px;
+    height:47px;
+    position: absolute;
+    background:papayawhip;
+    top: 40%;
+    background: url(img/prev0next.jpg) no-repeat;
+
+}
+
+/*下一页按钮样式*/
+.Obj_next{
+    right: 0;
+    background-size: 100px 100px;
+    background-position:-58px  -47px;
+}
+
+/*上一页按钮样式*/
+.Obj_prev{
+    left: 0;
+    background-size: 100px 100px;
+    background-position:-15px  -47px;
+}
